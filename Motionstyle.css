@@ -1,0 +1,13 @@
+.chart-container {
+    width: 80%; /* Adjust the width as needed */
+    margin: 50px auto; /* Center the container and provide some space from the top */
+    border: 1px solid #ccc; /* Add a border for visualization */
+    border-radius: 5px; /* Add some border radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+/* Styles for the canvas element */
+#lineChart {
+    width: 100%; /* Make the canvas element fill the container */
+    height: auto; /* Automatically adjust the height */
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Motion Data</title>
+    <link rel="stylesheet" href="Motionstyle.css">
+    <link rel="stylesheet" href="mainpStyle.css">
+</head>
+<body>
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <div class="dropdown-content" id="additional-tags">
+        <a href="#">Bandpower</a>
+        <a href="Motion.html">Motion data</a>
+        <a href="#">Performance Metric</a>
+    </div>
+
+    <main>
+        <!-- Main content goes here -->
+    </main>
+    <div class="chart-container">
+        <canvas id="lineChart"></canvas> <!-- Canvas element for Chart.js line chart -->
+    </div>
+
+    <script>
+        var ctx = document.getElementById('lineChart').getContext('2d');
+        var lineChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['03', '04', '05', '06', '07', '08', '09'],
+                datasets: [{
+                    label: 'Example Dataset',
+                    data: [65, 59, 80, 81, 56, 55, 40],
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+<script>
+    function toggleMenu(){
+        var additionalTags = document.getElementById('additional-tags');
+        additionalTags.classList.toggle('show');
+    }
+</script>
+
+</body>
+</html>

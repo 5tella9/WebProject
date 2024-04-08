@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <script src="node_modules/chat.js/dist/chat.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="mainpStyle.css">
+    <link rel="stylesheet" href="mainpStyle.css">
+</head>
+<body>
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <div class="dropdown-content" id="additional-tags">
+        <a href="#">Bandpower</a>
+        <a href="Motion.html">Motion data</a>
+        <a href="#">Performance Metric</a>
+    </div>
+
+    <main>
+        <!-- Main content goes here -->
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+<script>
+    function toggleMenu(){
+        var additionalTags = document.getElementById('additional-tags');
+        additionalTags.classList.toggle('show');
+    }
+</script>
+    
+</body>
+</html>
